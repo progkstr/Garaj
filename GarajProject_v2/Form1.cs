@@ -19,9 +19,9 @@ namespace GarajProject_v2
             using (cafeDB new_connect = new cafeDB())
             {
 
-                Person ad = new Person { Name = "ffffffffaa ddd", Adres = "asd342dwrds 2gtr3trr", Phone = "79977782211" };
-                new_connect.Persons.Add(ad);
-                new_connect.SaveChanges();
+                Person ad = new Person { Name = "Koleskin Mihail Aleksandrovich", Adres = "kostroma, dimitrova 1|2", Phone = "79977782211" }; //добавляем человека 
+                //new_connect.Persons.Add(ad);
+                //new_connect.SaveChanges();
             }
             using (cafeDB new_connect = new cafeDB())
             {
