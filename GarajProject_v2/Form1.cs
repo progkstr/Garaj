@@ -15,17 +15,9 @@ namespace GarajProject_v2
         public Form1()
         {
             InitializeComponent();
-
-            using (cafeDB new_connect = new cafeDB())
+            using (cafeDB db = new cafeDB())
             {
-
-                Person ad = new Person { Name = "Koleskin Mihail Aleksandrovich", Adres = "kostroma, dimitrova 1|2", Phone = "79977782211" }; //добавляем человека 
-                //new_connect.Persons.Add(ad);
-                //new_connect.SaveChanges();
-            }
-            using (cafeDB new_connect = new cafeDB())
-            {
-                foreach (var r in new_connect.Persons)
+                foreach (var r in db.Persons.ToList())
                 {
                     MessageBox.Show(r.ID.ToString()+ r.Name.ToString()+ r.Adres.ToString()+ r.Phone.ToString());
                 }

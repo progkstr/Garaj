@@ -12,6 +12,7 @@ namespace GarajProject_v2
     public abstract class BaseEntity
     {
         [Key]
+        
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
     }

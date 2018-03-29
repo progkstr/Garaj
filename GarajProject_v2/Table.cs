@@ -10,15 +10,15 @@ namespace GarajProject_v2
 {
     public class Table : BaseEntity
     {
-
-        public int Client { get; set; }
-        public int Number_table { get; set; }
-        public System.DateTime Date_in { get; set; }
+        public int? Number_table { get; set; }
+        public Nullable<System.DateTime> Date_in { get; set; }
         public Nullable<System.DateTime> Date_out { get; set; }
-        public int Number_seat { get; set; }
-        public int Id_Change { get; set; }
+        public int? Number_seat { get; set; }
+        
+        public int? ClientID { get; set; }
+        public int? ChangeID { get; set; }
 
-        public Change change { get; set; }
-        public Client client { get; set; }
+        public virtual Change Change { get; set; }
+        public virtual Client Client { get; set; }
     }
 }

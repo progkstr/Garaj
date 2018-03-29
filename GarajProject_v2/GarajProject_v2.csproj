@@ -58,6 +58,7 @@
     <Compile Include="cafeDB.cs" />
     <Compile Include="Change.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="ContextInitializer.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -65,6 +66,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -6,17 +6,22 @@
 
     public class cafeDB : DbContext
     {
+     
+        static cafeDB()
+        {
+            Database.SetInitializer<cafeDB>(new ContextInitializer());
+        }
         
         public cafeDB()
             : base("name=cafeDB")
         {
         }
 
-        //public virtual DbSet<Change> Changes { get; set; }
-        //public virtual DbSet<Client> Clients { get; set; }
-        //public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<Change> Changes { get; set; }
+        public virtual DbSet<Client> Clients { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Person> Persons { get; set; }
-        //public virtual DbSet<Table> Tables { get; set; }
+        public virtual DbSet<Table> Tables { get; set; }
 
         // Добавьте DbSet для каждого типа сущности, который требуется включить в модель. Дополнительные сведения 
         // о настройке и использовании модели Code First см. в статье http://go.microsoft.com/fwlink/?LinkId=390109.

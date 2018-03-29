@@ -11,19 +11,14 @@ namespace GarajProject_v2
     public class Employee : BaseEntity
     {
         public string Position { get; set; }
-        public Person person { get; set; }
+        public int? PersonID { get; set; }
+        public int? ChngeID { get; set; }
 
-        public Change change { get; set; }
+        public virtual Person Person { get; set; }
+        public virtual Change Change { get; set; }
 
         public Employee()
-        { }
-
-        //public Change c_host { get; set; }
-        //public Change c_adminisstrator { get; set; }
-        //public Change c_barista { get; set; }
-        //public Change c_povar { get; set; }
-        //public Change c_oficiant1 { get; set; }
-        //public Change c_oficiant2 { get; set; }
-        //public Change c_hostes { get; set; }
+        {
+        }
     }
 }

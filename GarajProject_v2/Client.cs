@@ -10,15 +10,16 @@ namespace GarajProject_v2
 {
     public class Client : BaseEntity
     {
-        
-        public string Number_card { get; set; }
-        //public Person person { get; set; }
 
-        public ICollection<Table> tables { get; set; }
+        public string Number_card { get; set; }
+        [ForeignKey ("Person")]
+        public int? PersonID { get; set; }
+        public virtual Person Person { get; set; }
+
+        public virtual ICollection<Table> Tables { get; set; }
         public Client()
         {
-            tables = new List<Table>();
+            Tables = new List<Table>();
         }
-        public virtual Person Person { get; set; }
     }
 }
